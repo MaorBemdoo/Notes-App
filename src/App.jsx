@@ -30,6 +30,12 @@ function App() {
     // localStorage.setItem("NotesStore", JSON.stringify(notes))
   }
 
+  const deleteNote = (id) => {
+    let newNotes = notes.filter((note) => {
+      note.id !== id
+    })
+  }
+
   return (
     <>
       <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
