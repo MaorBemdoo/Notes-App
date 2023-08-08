@@ -34,6 +34,7 @@ function App() {
     let newNotes = notes.filter((note) => {
       note.id !== id
     })
+    setNotes(newNotes)
   }
 
   return (
