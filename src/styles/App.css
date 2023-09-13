@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: aliceblue;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body > div{
+    padding: 2em;
+}
+
+body > div > div{
+    height: 350px;
+    width: 350px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+#addDiv{
+    display: grid;
+    place-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+#addDiv img{
+    width: 50px;
+    height: 50px;
+}

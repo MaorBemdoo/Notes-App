@@ -1,13 +1,12 @@
-import './App.css'
+import './styles/App.css'
 import addIcon from './assets/add-icon.svg'
+import AddComp from './components/addComp';
 
 function App() {
 
   return (
     <>
-      <div id="addDiv">
-        <img src={addIcon}/>
-      </div>
+      <AddComp addIcon={addIcon}/>
     </>
   )
 }
