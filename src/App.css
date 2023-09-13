@@ -9,15 +9,19 @@ body{
     margin: 0;
 }
 
+body > div{
+    padding: 2em;
+}
+
 body > div > div{
-    height: 200px;
-    width: 200px;
+    height: 350px;
+    width: 350px;
 }
 
 #addDiv{
     display: grid;
     place-items: center;
-    background-color: rgb(81, 79, 79);
+    background-color: rgb(169, 163, 163);
 }
 
 #addDiv img{
