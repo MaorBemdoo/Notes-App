@@ -3,7 +3,7 @@
 const NoteDiv = ({content}) => {
     return (
         <div>
-            {content}
+            <p>{content}</p>
         </div>
     )
 }
