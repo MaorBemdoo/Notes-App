@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import {notes} from '../notes'
 import NoteDiv from './noteComp'
 
 const NoteDivCompilation = () => {
