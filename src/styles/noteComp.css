@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+
+.note{
+    padding: 1em;
+}
+
+.note p{
+    font-family: 'Lobster Two', 'cursive';
+    font-weight: 500;
+    font-size: 1.2rem;
+}
