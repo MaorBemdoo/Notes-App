@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import {notes} from '../notes'
+import NoteDiv from './noteComp'
 
 const NoteDivCompilation = () => {
     return (
@@ -9,14 +10,6 @@ const NoteDivCompilation = () => {
                 return <NoteDiv content={content} key={id} />
             })}
         </>
-    )
-}
-
-const NoteDiv = ({content}) => {
-    return (
-        <div>
-            {content}
-        </div>
     )
 }
 
