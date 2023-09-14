@@ -3,7 +3,7 @@ import '../styles/noteComp.css'
 
 const NoteDiv = ({content}) => {
     return (
-        <div>
+        <div className='note'>
             <p>{content}</p>
         </div>
     )
