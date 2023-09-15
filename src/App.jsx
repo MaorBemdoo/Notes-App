@@ -15,10 +15,10 @@ function App() {
   }
 
   const onSubmitEvent = (e) => {
-    if(content.trim == ''){
+    e.preventDefault()
+    if(content.trim() == ''){
       return;
     } else{
-      e.preventDefault()
       setNotes([{
         content,
         id: uuidv4(),
