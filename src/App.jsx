@@ -3,6 +3,7 @@ import addIcon from './assets/add-icon.svg'
 import AddComp from './components/addComp';
 import NoteDivCompilation from './components/notesComp';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const [content, setContent] = useState('')
@@ -15,7 +16,10 @@ function App() {
 
   const onSubmitEvent = (e) => {
     e.preventDefault()
-    setNotes([{content: "Hello Men"}, ...notes])
+    setNotes([{
+      content,
+      id: uuidv4()
+  }])
   }
 
   return (
