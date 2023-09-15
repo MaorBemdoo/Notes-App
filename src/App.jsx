@@ -19,7 +19,7 @@ function App() {
     setNotes([{
       content,
       id: uuidv4()
-  }])
+  }, ...notes])
   }
 
   return (
