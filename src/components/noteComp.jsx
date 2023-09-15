@@ -10,7 +10,6 @@ const NoteDiv = ({content, bgColor}) => {
             <div>
                 <img src={sendIcon} alt='send'/>
             </div>
-
             <div>
                 <img src={menuIcon} alt='menu'/>
             </div>

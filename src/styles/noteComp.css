@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
 
+.note{
+    position: relative;
+}
+
 .note textarea{
     font-family: 'Lobster Two', 'cursive';
     font-weight: 500;
@@ -10,4 +14,22 @@
     resize: none;
     border-radius: 15px;
     color: black;
+}
+
+.note > div > img{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.note > div:nth-child(2){
+    position: absolute;
+    bottom: 0;
+    left: 7px;
+}
+
+.note div:last-child{
+    position: absolute;
+    bottom: 0;
+    right: 7px;
 }
