@@ -12,7 +12,7 @@ const NoteDiv = ({content, bgColor}) => {
             </div>
 
             <div>
-                <img src={menuIcon} alt='menu icon'/>
+                <img src={menuIcon} alt='menu'/>
             </div>
         </div>
     )
