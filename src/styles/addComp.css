@@ -43,18 +43,18 @@
 #addForm button{
     position: absolute;
     bottom: 0;
+    right: 0;
     background: transparent;
     outline: none;
     border: none;
     cursor: pointer;
 }
 
-#addForm button:nth-child(2){
+#addForm img:nth-child(2){
+    position: absolute;
+    bottom: 3px;
     left: 0;
-}
-
-#addForm button:last-child{
-    right: 0;
+    cursor: pointer;
 }
 
 #addForm button:last-child:hover{

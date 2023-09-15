@@ -8,7 +8,7 @@ const AddComp = ({addIcon, onClickEvent, clicked, isClicked, onSubmitEvent, onCh
         clicked ? (
             <form method="post" id='addForm' onSubmit={onSubmitEvent}>
                 <textarea onChange={onChangeEvent} value={content}></textarea>
-                <button><img src={backIcon} alt='back'/></button>
+                <img src={backIcon} alt='back'/>
                 <button role='submit'><img src={submitIcon} alt='submit'/></button>
             </form>
         ) : (
