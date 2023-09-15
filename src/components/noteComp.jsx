@@ -8,7 +8,7 @@ import { BsPencilSquare } from "react-icons/bs";
 const NoteDiv = ({content, bgColor}) => {
     return (
         <div className='note'>
-            <textarea style={{backgroundColor: bgColor}} disabled>{content}</textarea>
+            <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
             <div>
                 <div className='divMenu'>
                     <div>
