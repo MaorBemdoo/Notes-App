@@ -8,9 +8,11 @@ const NoteDiv = ({content, bgColor}) => {
         <div className='note'>
             <textarea style={{backgroundColor: bgColor}} disabled>{content}</textarea>
             <div>
+                <div className='divMenu'></div>
                 <img src={sendIcon} alt='send'/>
             </div>
             <div>
+                <div className='divMenu'></div>
                 <img src={menuIcon} alt='menu'/>
             </div>
         </div>
