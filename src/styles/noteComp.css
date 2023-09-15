@@ -3,6 +3,7 @@
 .note{
     padding: 1em;
     cursor: pointer;
+    overflow-y: scroll;
 }
 
 .note p{
