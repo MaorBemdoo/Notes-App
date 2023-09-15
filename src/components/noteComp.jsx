@@ -12,12 +12,15 @@ const NoteDiv = ({content, bgColor}) => {
             <div>
                 <div className='divMenu'>
                     <div>
-                        <BsPencilSquare style={{color: 'green'}}/>
-                        <p>Edit</p>
+                        <img src='' alt='delete'/>
+                        <p>Delete</p>
                     </div>
                     <div>
-
-                        <BsTrash3 style={{color: 'red'}}/>
+                        <img src='' alt='delete'/>
+                        <p>Delete</p>
+                    </div>
+                    <div>
+                        <img src='' alt='delete'/>
                         <p>Delete</p>
                     </div>
                 </div>
@@ -26,15 +29,12 @@ const NoteDiv = ({content, bgColor}) => {
             <div>
                 <div className='divMenu'>
                     <div>
-                        <img src='' alt='delete'/>
-                        <p>Delete</p>
+                        <BsPencilSquare style={{color: 'green'}}/>
+                        <p>Edit</p>
                     </div>
                     <div>
-                        <img src='' alt='delete'/>
-                        <p>Delete</p>
-                    </div>
-                    <div>
-                        <img src='' alt='delete'/>
+
+                        <BsTrash3 style={{color: 'red'}}/>
                         <p>Delete</p>
                     </div>
                 </div>

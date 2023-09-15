@@ -37,6 +37,7 @@
 .divMenu{
     padding: 1em;
     background-color: white;
+    height: 200px
 }
 
 .divMenu > div{
