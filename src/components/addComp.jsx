@@ -5,7 +5,7 @@ const AddComp = ({addIcon, onClickEvent, clicked}) => {
     return (
         clicked ? (
             <form method="post" id='addForm'>
-                <textarea role='submit'></textarea> 
+                <textarea></textarea>
             </form>
         ) : (
             <div id="addDiv" onClick={onClickEvent}>
