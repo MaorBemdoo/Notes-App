@@ -15,14 +15,18 @@ function App() {
   }
 
   const onSubmitEvent = (e) => {
-    e.preventDefault()
-    setNotes([{
-      content,
-      id: uuidv4(),
-      bgColor: `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
-  }, ...notes])
-  setContent('')
-  isClicked(false)
+    if(content.trim == ''){
+      return;
+    } else{
+      e.preventDefault()
+      setNotes([{
+        content,
+        id: uuidv4(),
+        bgColor: `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
+    }, ...notes])
+    setContent('')
+    isClicked(false)
+    }
   }
 
   return (
