@@ -2,6 +2,8 @@
 import '../styles/noteComp.css'
 import menuIcon from '../assets/menu-icon.svg'
 import sendIcon from '../assets/send-icon.svg'
+import editIcon from '../assets/edit-icon.svg'
+import deleteIcon from '../assets/delete-icon.svg'
 
 const NoteDiv = ({content, bgColor}) => {
     return (
@@ -10,11 +12,11 @@ const NoteDiv = ({content, bgColor}) => {
             <div>
                 <div className='divMenu'>
                     <div>
-                        <img src={} alt='edit'/>
+                        <img src={editIcon} alt='edit'/>
                         <p>Edit</p>
                     </div>
                     <div>
-                        <img src={} alt='delete'/>
+                        <img src={deleteIcon} alt='delete'/>
                         <p>Delete</p>
                     </div>
                 </div>
