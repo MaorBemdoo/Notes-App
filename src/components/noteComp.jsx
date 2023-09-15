@@ -2,8 +2,8 @@
 import '../styles/noteComp.css'
 import menuIcon from '../assets/menu-icon.svg'
 import sendIcon from '../assets/send-icon.svg'
-import editIcon from '../assets/edit-icon.svg'
-import deleteIcon from '../assets/delete-icon.svg'
+import { BsTrash3 } from "react-icons/bs";
+import { BsPencilSquare } from "react-icons/bs";
 
 const NoteDiv = ({content, bgColor}) => {
     return (
@@ -12,11 +12,12 @@ const NoteDiv = ({content, bgColor}) => {
             <div>
                 <div className='divMenu'>
                     <div>
-                        <img src={editIcon} alt='edit'/>
+                        <BsPencilSquare style={{color: 'green'}}/>
                         <p>Edit</p>
                     </div>
                     <div>
-                        <img src={deleteIcon} alt='delete'/>
+
+                        <BsTrash3 style={{color: 'red'}}/>
                         <p>Delete</p>
                     </div>
                 </div>
