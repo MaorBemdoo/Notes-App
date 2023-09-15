@@ -5,7 +5,7 @@ import NoteDivCompilation from './components/notesComp';
 import { useState } from 'react';
 
 function App() {
-  const [notes, setNotes] = useState([{content: "Hey bro", id: 1}])
+  const [notes, setNotes] = useState([])
   const [clicked, isClicked] = useState(false)
 
   const onSubmitEvent = (e) => {
