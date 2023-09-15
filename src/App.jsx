@@ -20,6 +20,7 @@ function App() {
       content,
       id: uuidv4()
   }, ...notes])
+  setContent('')
   }
 
   return (
