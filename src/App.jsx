@@ -10,16 +10,12 @@ function App() {
 
   const onSubmitEvent = (e) => {
     e.preventDefault()
-  }
-
-  const addNotes = () => {
-    isClicked(!clicked)
     setNotes([{content: "Hello Men"}, ...notes])
   }
 
   return (
     <>
-      <AddComp addIcon={addIcon} onClickEvent={addNotes} clicked={clicked} onSubmitEvent={onSubmitEvent}/>
+      <AddComp addIcon={addIcon} onClickEvent={() => isClicked(!clicked)} clicked={clicked} onSubmitEvent={onSubmitEvent}/>
       <NoteDivCompilation notes={notes}/>
     </>
   )
