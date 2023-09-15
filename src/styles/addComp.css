@@ -43,14 +43,21 @@
 #addForm button{
     position: absolute;
     bottom: 0;
-    right: 0;
     background: transparent;
     outline: none;
     border: none;
     cursor: pointer;
 }
 
-#addForm button:hover{
+#addForm button:nth-child(2){
+    left: 0;
+}
+
+#addForm button:last-child{
+    right: 0;
+}
+
+#addForm button:last-child:hover{
     transform: translate(5px, -5px);
     transition: transform ease-out 500ms;
 }
