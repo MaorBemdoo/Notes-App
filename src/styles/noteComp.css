@@ -35,5 +35,20 @@
 }
 
 .divMenu{
-    
+    padding: 1em;
+    background-color: white;
+    height: 70px
+}
+
+.divMenu > div{
+    display: flex;
+    cursor: pointer;
+}
+
+.divMenu > div *{
+    margin: 0 auto;
+}
+
+.divMenu > div > img{
+    flex-basis: 30%;
 }
