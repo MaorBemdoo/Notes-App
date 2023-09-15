@@ -19,14 +19,15 @@ function App() {
     if(content.trim() == ''){
       return;
     } else{
-      setNotes([{
-        content,
-        id: uuidv4(),
-        bgColor: `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
-    }, ...notes])
     setContent('')
     isClicked(false)
     }
+    setNotes([{
+      content,
+      id: uuidv4(),
+      bgColor: `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
+    }, ...notes])
+    // localStorage.setItem("NotesStore", JSON.stringify(notes))
   }
 
   return (
