@@ -18,7 +18,8 @@ function App() {
     e.preventDefault()
     setNotes([{
       content,
-      id: uuidv4()
+      id: uuidv4(),
+      bgColor: `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
   }, ...notes])
   setContent('')
   isClicked(false)
