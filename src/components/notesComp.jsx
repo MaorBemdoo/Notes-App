@@ -4,9 +4,9 @@ import NoteDiv from './noteComp'
 const NoteDivCompilation = ({notes}) => {
     return (
         <>
-            {notes.map(({content, id}) => {
+            {notes.map(({content, id, bgColor}) => {
                 // console.log(content);
-                return <NoteDiv content={content} key={id} />
+                return <NoteDiv content={content} key={id} bgColor={bgColor}/>
             })}
         </>
     )
