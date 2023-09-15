@@ -1,11 +1,17 @@
 /* eslint-disable react/prop-types */
 import '../styles/addComp.css'
 
-const AddComp = ({addIcon, onClickEvent}) => {
+const AddComp = ({addIcon, onClickEvent, clicked}) => {
     return (
-        <div id="addDiv" onClick={onClickEvent}>
-            <img src={addIcon} />
-        </div>
+        clicked ? (
+            <div>
+                Hey
+            </div>
+        ) : (
+            <div id="addDiv" onClick={onClickEvent}>
+                <img src={addIcon} />
+            </div>
+        )
     )
 }
 

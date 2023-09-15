@@ -6,15 +6,16 @@ import { useState } from 'react';
 
 function App() {
   const [notes, setNotes] = useState([{content: "Hey bro", id: 1}])
+  const [clicked, isClicked] = useState(false)
 
-  const addNotes = (e) => {
-    console.log(e);
-    setNotes([{content: "Hello World", id: 2}])
+  const addNotes = () => {
+    isClicked(!clicked)
+    setNotes([{content: "Hello Men"}, ...notes])
   }
 
   return (
     <>
-      <AddComp addIcon={addIcon} onClickEvent={addNotes}/>
+      <AddComp addIcon={addIcon} onClickEvent={addNotes} clicked={clicked}/>
       <NoteDivCompilation notes={notes}/>
     </>
   )
