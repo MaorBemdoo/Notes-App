@@ -21,6 +21,7 @@ function App() {
       id: uuidv4()
   }, ...notes])
   setContent('')
+  isClicked(false)
   }
 
   return (
