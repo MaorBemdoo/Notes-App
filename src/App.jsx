@@ -8,6 +8,10 @@ function App() {
   const [notes, setNotes] = useState([{content: "Hey bro", id: 1}])
   const [clicked, isClicked] = useState(false)
 
+  const onSubmitEvent = (e) => {
+    e.preventDefault()
+  }
+
   const addNotes = () => {
     isClicked(!clicked)
     setNotes([{content: "Hello Men"}, ...notes])
@@ -15,7 +19,7 @@ function App() {
 
   return (
     <>
-      <AddComp addIcon={addIcon} onClickEvent={addNotes} clicked={clicked}/>
+      <AddComp addIcon={addIcon} onClickEvent={addNotes} clicked={clicked} onSubmitEvent={onSubmitEvent}/>
       <NoteDivCompilation notes={notes}/>
     </>
   )
