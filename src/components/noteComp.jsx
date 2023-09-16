@@ -4,13 +4,19 @@ import menuIcon from '../assets/menu-icon.svg'
 import sendIcon from '../assets/send-icon.svg'
 import { BsTrash3 } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
+import { useState } from 'react';
 
 const NoteDiv = ({content, bgColor}) => {
+    const [{first, second}, setMenuClicked] = useState({
+        first: false,
+        second: false
+    })
+
     return (
         <div className='note'>
             <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
             <div>
-                <div className='divMenu'>
+                <div className='divMenu' style={{display: !first ? 'none' : 'block'}}>
                     <div>
                         <img src='' alt='delete'/>
                         <p>Delete</p>
@@ -24,10 +30,10 @@ const NoteDiv = ({content, bgColor}) => {
                         <p>Delete</p>
                     </div>
                 </div>
-                <img src={sendIcon} alt='send'/>
+                <img src={sendIcon} alt='send' onClick={() => setMenuClicked({first: !first, second})}/>
             </div>
             <div>
-                <div className='divMenu'>
+                <div className='divMenu' style={{display: !second ? 'none' : 'block'}}>
                     <div>
                         <BsPencilSquare style={{color: 'green'}}/>
                         <p>Edit</p>
@@ -38,7 +44,7 @@ const NoteDiv = ({content, bgColor}) => {
                         <p>Delete</p>
                     </div>
                 </div>
-                <img src={menuIcon} alt='menu'/>
+                <img src={menuIcon} alt='menu' onClick={() => setMenuClicked({first, second: !second})}/>
             </div>
         </div>
     )
