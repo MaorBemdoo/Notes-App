@@ -32,7 +32,9 @@ function App() {
 
   return (
     <>
-      <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => isClicked(!clicked)} clicked={clicked} onSubmitEvent={onSubmitEvent} onChangeEvent={onChangeEvent} content={content} setContent={setContent}/>
+      <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
+        isClicked(!clicked)
+      }} clicked={clicked} onSubmitEvent={onSubmitEvent} onChangeEvent={onChangeEvent} content={content} setContent={setContent}/>
       <NoteDivCompilation notes={notes}/>
     </>
   )
