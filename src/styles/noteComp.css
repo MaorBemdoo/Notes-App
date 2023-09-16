@@ -16,6 +16,48 @@
     color: black;
 }
 
+.note > div{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.note > div:nth-child(2){
+    left: 10px;
+}
+
+.note > div:nth-child(2) > img{
+    align-self: start;
+}
+
+.note > div:last-child{
+    right: 10px;
+}
+
+.note > div:last-child > img{
+    align-self: end;
+}
+
+.note > div .divMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 1em;
+}
+
+.divMenu > div{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100px;
+    cursor: pointer;
+    height: 20px;
+}
+
 .note > div > img{
     cursor: pointer;
     width: 30px;
