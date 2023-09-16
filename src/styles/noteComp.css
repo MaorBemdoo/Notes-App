@@ -51,6 +51,11 @@
     padding: 1em;
 }
 
+.note > div:last-child .divMenu{
+    position: relative;
+    left: 100px;
+}
+
 .divMenu > div{
     display: flex;
     align-items: center;
