@@ -57,7 +57,10 @@
     gap: 13px;
     width: 100px;
     cursor: pointer;
-    height: 20px;
+}
+
+.divMenu > div:not(:last-child){
+    border-bottom: 1px black solid;
 }
 
 .note > div > img{
