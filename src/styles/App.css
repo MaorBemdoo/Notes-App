@@ -12,14 +12,14 @@ body{
 
 body > div{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2em;
     padding: 2em;
 }
 
 body > div > div{
     height: 300px;
-    width: 300px;
+    /* width: 300px; */
     border-radius: 15px;
     border: 1px solid black;
 }
