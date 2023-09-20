@@ -6,7 +6,7 @@ import { BsTrash3 } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
 import { useState } from 'react';
 
-const NoteDiv = ({content, bgColor}) => {
+const NoteDiv = ({content, bgColor, id, deleteNote}) => {
     const [{first, second}, setMenuClicked] = useState({
         first: false,
         second: false
@@ -38,8 +38,7 @@ const NoteDiv = ({content, bgColor}) => {
                         <BsPencilSquare style={{color: 'green'}}/>
                         <p>Edit</p>
                     </div>
-                    <div>
-
+                    <div onClick={() => deleteNote(id)}>
                         <BsTrash3 style={{color: 'red'}}/>
                         <p>Delete</p>
                     </div>

@@ -31,10 +31,11 @@ function App() {
   }
 
   const deleteNote = (id) => {
-    let newNotes = notes.filter((note) => {
-      note.id !== id
-    })
+    console.log(id);
+    console.log(notes);
+    const newNotes = notes.filter((note) => note.id !== id)
     setNotes(newNotes)
+    console.log(newNotes);
   }
 
   return (
@@ -42,7 +43,7 @@ function App() {
       <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
         isClicked(!clicked)
       }} clicked={clicked} onSubmitEvent={onSubmitEvent} onChangeEvent={onChangeEvent} content={content} setContent={setContent}/>
-      <NoteDivCompilation notes={notes}/>
+      <NoteDivCompilation notes={notes} deleteNote={deleteNote}/>
     </>
   )
 }
