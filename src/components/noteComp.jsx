@@ -14,7 +14,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, editNote, edited}) => {
 
     return (
         <div className='note'>
-            <textarea style={{backgroundColor: bgColor}} value={content} disabled={!edited}></textarea>
+            <textarea style={{backgroundColor: bgColor}} value={content} disabled={!edited></textarea>
             <div>
                 <div className='divMenu' style={{display: !first ? 'none' : 'block'}}>
                     <div>
