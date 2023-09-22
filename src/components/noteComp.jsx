@@ -6,7 +6,7 @@ import { BsTrash3 } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
 import { useState } from 'react';
 
-const NoteDiv = ({content, bgColor, id, deleteNote, editNote}) => {
+const NoteDiv = ({content, bgColor, id, deleteNote, editNote, edited}) => {
     const [{first, second}, setMenuClicked] = useState({
         first: false,
         second: false
@@ -14,7 +14,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, editNote}) => {
 
     return (
         <div className='note'>
-            <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
+            <textarea style={{backgroundColor: bgColor}} value={content} disabled={!edited}></textarea>
             <div>
                 <div className='divMenu' style={{display: !first ? 'none' : 'block'}}>
                     <div>

@@ -9,6 +9,7 @@ function App() {
   const [content, setContent] = useState('')
   const [notes, setNotes] = useState([])
   const [clicked, isClicked] = useState(false)
+  const [edited, isEdited] = useState(false)
 
   const onChangeEvent = (e) => {
     setContent(e.target.value)
@@ -36,7 +37,7 @@ function App() {
   }
 
   const editNote = () => {
-    
+    isEdited(!edited)
   }
 
   return (
@@ -44,7 +45,7 @@ function App() {
       <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
         isClicked(!clicked)
       }} clicked={clicked} onSubmitEvent={onSubmitEvent} onChangeEvent={onChangeEvent} content={content} setContent={setContent}/>
-      <NoteDivCompilation notes={notes} deleteNote={deleteNote}/>
+      <NoteDivCompilation notes={notes} deleteNote={deleteNote} editNote={editNote} edited={edited}/>
     </>
   )
 }
