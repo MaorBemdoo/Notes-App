@@ -35,6 +35,10 @@ function App() {
     setNotes(newNotes)
   }
 
+  const editNote = () => {
+    
+  }
+
   return (
     <>
       <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
