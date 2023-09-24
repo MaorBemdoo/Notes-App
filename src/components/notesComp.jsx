@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import NoteDiv from './noteComp'
 
-const NoteDivCompilation = ({notes, deleteNote}) => {
+const NoteDivCompilation = ({notes, deleteNote, editNote}) => {
     return (
         <>
             {notes.map(({content, id, bgColor}) => {
