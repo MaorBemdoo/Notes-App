@@ -34,7 +34,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote}) => {
             </div>
             <div>
                 <div className='divMenu' style={{display: !second ? 'none' : 'block'}}>
-                    <div>
+                    <div onClick={editNote}>
                         <BsPencilSquare style={{color: 'green'}}/>
                         <p>Edit</p>
                     </div>
