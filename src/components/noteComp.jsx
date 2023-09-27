@@ -13,39 +13,44 @@ const NoteDiv = ({content, bgColor, id, deleteNote, editNote, edited}) => {
     })
 
     return (
-        <div className='note'>
-            <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
-            <div>
-                <div className='divMenu' style={{display: !first ? 'none' : 'block'}}>
-                    <div>
-                        <img src='' alt='delete'/>
-                        <p>Delete</p>
-                    </div>
-                    <div>
-                        <img src='' alt='delete'/>
-                        <p>Delete</p>
-                    </div>
-                    <div>
-                        <img src='' alt='delete'/>
-                        <p>Delete</p>
-                    </div>
-                </div>
-                <img src={sendIcon} alt='send' onClick={() => setMenuClicked({first: !first, second})}/>
+        edited ? 
+            <div className='note'>
+                
             </div>
-            <div>
-                <div className='divMenu' style={{display: !second ? 'none' : 'block'}}>
-                    <div onClick={editNote}>
-                        <BsPencilSquare style={{color: 'green'}}/>
-                        <p>Edit</p>
+        : 
+            <div className='note'>
+                <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
+                <div>
+                    <div className='divMenu' style={{display: !first ? 'none' : 'block'}}>
+                        <div>
+                            <img src='' alt='delete'/>
+                            <p>Delete</p>
+                        </div>
+                        <div>
+                            <img src='' alt='delete'/>
+                            <p>Delete</p>
+                        </div>
+                        <div>
+                            <img src='' alt='delete'/>
+                            <p>Delete</p>
+                        </div>
                     </div>
-                    <div onClick={() => deleteNote(id)}>
-                        <BsTrash3 style={{color: 'red'}}/>
-                        <p>Delete</p>
-                    </div>
+                    <img src={sendIcon} alt='send' onClick={() => setMenuClicked({first: !first, second})}/>
                 </div>
-                <img src={menuIcon} alt='menu' onClick={() => setMenuClicked({first, second: !second})}/>
+                <div>
+                    <div className='divMenu' style={{display: !second ? 'none' : 'block'}}>
+                        <div onClick={editNote}>
+                            <BsPencilSquare style={{color: 'green'}}/>
+                            <p>Edit</p>
+                        </div>
+                        <div onClick={() => deleteNote(id)}>
+                            <BsTrash3 style={{color: 'red'}}/>
+                            <p>Delete</p>
+                        </div>
+                    </div>
+                    <img src={menuIcon} alt='menu' onClick={() => setMenuClicked({first, second: !second})}/>
+                </div>
             </div>
-        </div>
     )
 }
 
