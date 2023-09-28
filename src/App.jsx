@@ -2,12 +2,20 @@ import './styles/App.css'
 import addIcon from './assets/add-icon.svg'
 import AddComp from './components/addComp';
 import NoteDivCompilation from './components/notesComp';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const [content, setContent] = useState('')
-  const [notes, setNotes] = useState([])
+  const [notes, setNotes] = useState(() => {
+    const storedNotes = localStorage.getItem('notes');
+    return storedNotes ? JSON.parse(storedNotes) : [];
+  })
+
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes]);
+
   const [clicked, isClicked] = useState(false)
   // const [edited, isEdited] = useState(false)
 
@@ -28,7 +36,6 @@ function App() {
       id: uuidv4(),
       bgColor: `rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
     }, ...notes])
-    // localStorage.setItem("NotesStore", JSON.stringify(notes))
   }
 
   const deleteNote = (id) => {
