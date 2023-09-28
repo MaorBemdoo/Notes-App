@@ -6,17 +6,22 @@ import { BsTrash3 } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
 import { useState } from 'react';
 
-const NoteDiv = ({content, bgColor, id, deleteNote, editNote, edited}) => {
+const NoteDiv = ({content, setContent, bgColor, id, deleteNote}) => {
     const [{first, second}, setMenuClicked] = useState({
         first: false,
         second: false
     })
+    const [edited, isEdited] = useState(false)
+
+    const editNote = () => {
+        isEdited(!edited)
+    }
 
     return (
         edited ? 
-            <div className='note'>
-                
-            </div>
+            <form className="formNote">
+                <textarea value={content}></textarea>
+            </form>
         : 
             <div className='note'>
                 <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
