@@ -1,7 +1,7 @@
 import './styles/App.css'
 import addIcon from './assets/add-icon.svg'
-import AddComp from './components/addComp';
-import NoteDivCompilation from './components/notesComp';
+import AddComp from './components/AddComp';
+import NoteDivCompilation from './components/NotesComp';
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 

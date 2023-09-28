@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import NoteDiv from './noteComp'
+import NoteDiv from './NoteComp'
 
 const NoteDivCompilation = ({notes, deleteNote, edited, propDrilledSubmitHandler}) => {
     return (
