@@ -4,6 +4,7 @@ import AddComp from './components/AddComp';
 import NoteDivCompilation from './components/NotesComp';
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import Loading from './components/Loading';
 
 function App() {
   const [content, setContent] = useState('')
@@ -17,6 +18,7 @@ function App() {
   }, [notes]);
 
   const [clicked, isClicked] = useState(false)
+  const [loading, isLoading] = useState(true)
   // const [edited, isEdited] = useState(false)
 
   const onChangeEvent = (e) => {
@@ -51,13 +53,20 @@ function App() {
     );
   }
 
+  window.onload = () => {
+    isLoading(false)
+  }
+
   return (
-    <>
-      <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
-        isClicked(!clicked)
-      }} clicked={clicked} onSubmitEvent={onSubmitEvent} onChangeEvent={onChangeEvent} content={content} setContent={setContent}/>
-      <NoteDivCompilation notes={notes} deleteNote={deleteNote} propDrilledSubmitHandler={propDrilledSubmitHandler}/>
-    </>
+      loading ? 
+        <Loading notes={notes}/>
+        :
+        <>
+          <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
+            isClicked(!clicked)
+          }} clicked={clicked} onSubmitEvent={onSubmitEvent} onChangeEvent={onChangeEvent} content={content} setContent={setContent}/>
+          <NoteDivCompilation notes={notes} deleteNote={deleteNote} propDrilledSubmitHandler={propDrilledSubmitHandler}/>
+        </>
   )
 }
 
