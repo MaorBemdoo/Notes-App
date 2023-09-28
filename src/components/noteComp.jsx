@@ -16,13 +16,23 @@ const NoteDiv = ({content, bgColor, id, deleteNote}) => {
     const [editedContent, setEditedContent] = useState(content)
     const [edited, isEdited] = useState(false)
 
+    const formNoteSubmit = (e) => {
+        e.preventDefault()
+        isEdited(false)
+        setMenuClicked({
+            first: false,
+            second: false
+        })
+        
+    }
+
     // const editNote = () => {
     //     isEdited(!edited)
     // }
 
     return (
         edited ? 
-            <form className="formNote" method='post'>
+            <form className="formNote" method='post' onSubmit={formNoteSubmit}>
                 <textarea style={{backgroundColor: bgColor}} value={editedContent} onChange={(e) => setEditedContent(e.target.value)}></textarea>
                 <img src={backIcon} alt='back' onClick={() => {
                     isEdited(false)
