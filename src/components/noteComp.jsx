@@ -8,7 +8,7 @@ import { BsTrash3 } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
 import { useState } from 'react';
 
-const NoteDiv = ({content, bgColor, id, deleteNote}) => {
+const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler}) => {
     const [{first, second}, setMenuClicked] = useState({
         first: false,
         second: false
@@ -23,7 +23,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote}) => {
             first: false,
             second: false
         })
-        
+        propDrilledSubmitHandler(id, editedContent)
     }
 
     // const editNote = () => {

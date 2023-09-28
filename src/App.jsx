@@ -36,16 +36,20 @@ function App() {
     setNotes(newNotes)
   }
 
-  // const editNote = () => {
-  //   isEdited(!edited)
-  // }
+  const propDrilledSubmitHandler = (editingId, editedContent) => {
+    setNotes((prevNotes) =>
+      prevNotes.map((note) =>
+        note.id === editingId ? { ...note, content: editedContent } : note
+      )
+    );
+  }
 
   return (
     <>
       <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
         isClicked(!clicked)
       }} clicked={clicked} onSubmitEvent={onSubmitEvent} onChangeEvent={onChangeEvent} content={content} setContent={setContent}/>
-      <NoteDivCompilation notes={notes} deleteNote={deleteNote} /* editNote={editNote} edited={edited} */ />
+      <NoteDivCompilation notes={notes} deleteNote={deleteNote} propDrilledSubmitHandler={propDrilledSubmitHandler}/>
     </>
   )
 }
