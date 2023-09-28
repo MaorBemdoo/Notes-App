@@ -99,10 +99,15 @@
 
 .formNote button{
     position: absolute;
-    bottom: 0;
+    bottom: 3px;
     right: 0;
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.formNote button:hover{
+    transform: translate(5px, -5px);
+    transition: transform ease-out 500ms;
 }
