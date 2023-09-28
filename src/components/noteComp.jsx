@@ -2,6 +2,8 @@
 import '../styles/noteComp.css'
 import menuIcon from '../assets/menu-icon.svg'
 import sendIcon from '../assets/send-icon.svg'
+import submitIcon from '../assets/submit-icon.svg'
+import backIcon from '../assets/back-icon.svg'
 import { BsTrash3 } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
 import { useState } from 'react';
@@ -20,8 +22,17 @@ const NoteDiv = ({content, bgColor, id, deleteNote}) => {
 
     return (
         edited ? 
-            <form className="formNote">
+            <form className="formNote" method='post'>
                 <textarea style={{backgroundColor: bgColor}} value={editedContent} onChange={(e) => setEditedContent(e.target.value)}></textarea>
+                <img src={backIcon} alt='back' onClick={() => {
+                    isEdited(false)
+                    setEditedContent(content)
+                    setMenuClicked({
+                        first: false,
+                        second: false
+                    })
+                }}/>
+                <button><img src={submitIcon} alt='submit'/></button>
             </form>
         : 
             <div className='note'>
