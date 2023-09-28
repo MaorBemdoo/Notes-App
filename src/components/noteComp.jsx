@@ -14,9 +14,9 @@ const NoteDiv = ({content, bgColor, id, deleteNote}) => {
     const [editedContent, setEditedContent] = useState(content)
     const [edited, isEdited] = useState(false)
 
-    const editNote = () => {
-        isEdited(!edited)
-    }
+    // const editNote = () => {
+    //     isEdited(!edited)
+    // }
 
     return (
         edited ? 
@@ -45,7 +45,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote}) => {
                 </div>
                 <div>
                     <div className='divMenu' style={{display: !second ? 'none' : 'block'}}>
-                        <div onClick={editNote}>
+                        <div onClick={() => isEdited(!edited)}>
                             <BsPencilSquare style={{color: 'green'}}/>
                             <p>Edit</p>
                         </div>
