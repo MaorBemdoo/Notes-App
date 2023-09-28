@@ -21,7 +21,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote}) => {
     return (
         edited ? 
             <form className="formNote">
-                <textarea value={editedContent} onChange={(e) => setEditedContent(e.target.value)}></textarea>
+                <textarea style={{backgroundColor: bgColor}} value={editedContent} onChange={(e) => setEditedContent(e.target.value)}></textarea>
             </form>
         : 
             <div className='note'>
