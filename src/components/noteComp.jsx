@@ -11,6 +11,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote}) => {
         first: false,
         second: false
     })
+    const [editedContent, setEditedContent] = useState(content)
     const [edited, isEdited] = useState(false)
 
     const editNote = () => {
@@ -20,7 +21,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote}) => {
     return (
         edited ? 
             <form className="formNote">
-                <textarea value={content}></textarea>
+                <textarea value={editedContent} onChange={(e) => setEditedContent(e.target.value)}></textarea>
             </form>
         : 
             <div className='note'>
