@@ -23,7 +23,11 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler}) =
             first: false,
             second: false
         })
-        propDrilledSubmitHandler(id, editedContent)
+        if (editedContent.trim() == "") {
+            deleteNote(id)
+        } else{
+            propDrilledSubmitHandler(id, editedContent)
+        }
     }
 
     // const editNote = () => {
