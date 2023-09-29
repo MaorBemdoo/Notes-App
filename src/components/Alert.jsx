@@ -5,11 +5,13 @@ import { useState } from 'react'
 
 function Alert() {
     const [show, setShow] = useState(false)
+    const [Icon, setIcon] = useState(BsInfoCircle)
+    const [text, setText] = useState("")
 
     return (
         <div id='formAlert' className={show && "show"}>
-            <BsInfoCircle id='infoIcon' onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, alias.</p>
+            <Icon id='infoIcon' onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}/>
+            <p>{text}</p>
         </div>
     )
 }
