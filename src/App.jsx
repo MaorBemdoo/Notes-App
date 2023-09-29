@@ -31,6 +31,7 @@ function App() {
 
   const onSubmitEvent = (e) => {
     e.preventDefault();
+    document.getElementById("formAlert").style.display = "flex"
     for (const note of notes) {
       if (note.content.trim().toLowerCase() == content.trim().toLowerCase()) {
         setErr({icon: "", text: "There is already a note with this content"})
