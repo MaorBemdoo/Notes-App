@@ -4,8 +4,7 @@ import menuIcon from '../../assets/menu-icon.svg'
 import sendIcon from '../../assets/send-icon.svg'
 import submitIcon from '../../assets/submit-icon.svg'
 import backIcon from '../../assets/back-icon.svg'
-import { BsTrash3 } from "react-icons/bs";
-import { BsPencilSquare } from "react-icons/bs";
+import { BsTrash3, BsPencilSquare, BsWhatsapp, BsEnvelopeAt } from "react-icons/bs";
 import { useState } from 'react';
 import Alert from '../Alert'
 
@@ -73,16 +72,12 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, er
                 <div>
                     <div className='divMenu' style={{display: !first ? 'none' : 'block'}}>
                         <div>
-                            <img src='' alt='delete'/>
-                            <p>Delete</p>
+                            <BsEnvelopeAt/>
+                            <p>Email</p>
                         </div>
                         <div>
-                            <img src='' alt='delete'/>
-                            <p>Delete</p>
-                        </div>
-                        <div>
-                            <img src='' alt='delete'/>
-                            <p>Delete</p>
+                            <BsWhatsapp/>
+                            <p>Whatsapp</p>
                         </div>
                     </div>
                     <img src={sendIcon} alt='send' onClick={() => setMenuClicked({first: !first, second})}/>
