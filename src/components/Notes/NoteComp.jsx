@@ -31,7 +31,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, er
     }
 
     const inputHandler = (e) => {
-        if(e.target.value == ""){
+        if(e.target.value.trim() == ""){
             document.getElementById("formAlert").style.display = "flex"
             setErr({
                 icon: "",
