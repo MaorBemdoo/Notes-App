@@ -108,6 +108,7 @@ function App() {
         deleteNote={deleteNote}
         propDrilledSubmitHandler={propDrilledSubmitHandler}
         err={err}
+        setErr={setErr}
       />
     </>
   );

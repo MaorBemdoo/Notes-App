@@ -6,11 +6,12 @@ const NoteDivCompilation = ({
   deleteNote,
   edited,
   propDrilledSubmitHandler,
-  err
+  err,
+  setErr
 }) => {
   return (
     <>
-      {notes.map(({ content, id, bgColor }) => {
+      {notes.map(({ content, id, bgColor}) => {
         // console.log(content);
         return (
           <NoteDiv
@@ -22,6 +23,7 @@ const NoteDivCompilation = ({
             edited={edited}
             propDrilledSubmitHandler={propDrilledSubmitHandler}
             err={err}
+            setErr={setErr}
           />
         );
       })}

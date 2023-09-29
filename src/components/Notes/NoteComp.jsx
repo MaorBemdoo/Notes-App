@@ -9,7 +9,7 @@ import { BsPencilSquare } from "react-icons/bs";
 import { useState } from 'react';
 import Alert from '../Alert'
 
-const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, err}) => {
+const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, err, setErr}) => {
     const [{first, second}, setMenuClicked] = useState({
         first: false,
         second: false
@@ -30,6 +30,17 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, er
         propDrilledSubmitHandler(id, editedContent, isEdited)
     }
 
+    const changeHandler = (e) => {
+        setEditedContent(e.target.value)
+        if(editedContent.trim() == ""){
+            document.getElementById("formAlert").style.display = "flex"
+            setErr({
+                icon: "",
+                text: "Edited notes with empty text are automatically deleted"
+            })
+        }
+    }
+
     // document.addEventListener("keydown", (e) => {
     //     if (e.ctrlKey && e.key == "Enter") {
     //         formNoteSubmit(e);
@@ -44,7 +55,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, er
         edited ? 
             <form className="formNote" method='post' onSubmit={formNoteSubmit}>
                 <Alert err={err}/>
-                <textarea style={{backgroundColor: bgColor}} value={editedContent} onChange={(e) => setEditedContent(e.target.value)}></textarea>
+                <textarea style={{backgroundColor: bgColor}} value={editedContent} onChange={changeHandler}></textarea>
                 <img src={backIcon} alt='back' title='Back' onClick={() => {
                     isEdited(false)
                     setEditedContent(content)
