@@ -30,14 +30,15 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, er
         propDrilledSubmitHandler(id, editedContent, isEdited)
     }
 
-    const changeHandler = (e) => {
-        setEditedContent(e.target.value)
-        if(editedContent.trim() == ""){
+    const inputHandler = (e) => {
+        if(e.target.value == ""){
             document.getElementById("formAlert").style.display = "flex"
             setErr({
                 icon: "",
                 text: "Edited notes with empty text are automatically deleted"
             })
+        } else{
+            document.getElementById("formAlert").style.display = "none"
         }
     }
 
@@ -55,7 +56,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, er
         edited ? 
             <form className="formNote" method='post' onSubmit={formNoteSubmit}>
                 <Alert err={err}/>
-                <textarea style={{backgroundColor: bgColor}} value={editedContent} onChange={changeHandler}></textarea>
+                <textarea style={{backgroundColor: bgColor}} value={editedContent} onFocus={() => document.getElementById("formAlert").style.display = "none"} onInput={inputHandler} onChange={(e) => setEditedContent(e.target.value)}></textarea>
                 <img src={backIcon} alt='back' title='Back' onClick={() => {
                     isEdited(false)
                     setEditedContent(content)
