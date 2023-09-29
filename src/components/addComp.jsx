@@ -4,6 +4,11 @@ import submitIcon from '../assets/submit-icon.svg'
 import backIcon from '../assets/back-icon.svg'
 
 const AddComp = ({addIcon, onClickEvent, clicked, isClicked, onSubmitEvent, onChangeEvent, content, setContent}) => {
+    document.addEventListener("keydown", (e) => {
+        if (e.ctrlKey && e.key == "Enter") {
+            onSubmitEvent(e);
+        }
+    });
     return (
         clicked ? (
             <form method="post" id='addForm' onSubmit={onSubmitEvent}>
