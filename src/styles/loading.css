@@ -19,6 +19,11 @@
     animation: spinnerAnim 500ms infinite forwards;
 }
 
+#loading p{
+    font-size: 1.2rem;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+}
+
 @keyframes spinnerAnim {
     to{
         transform: rotate(1turn);
