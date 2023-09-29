@@ -101,6 +101,7 @@ function App() {
         onChangeEvent={onChangeEvent}
         content={content}
         setContent={setContent}
+        err={err}
       />
       <NoteDivCompilation
         notes={notes}
