@@ -10,10 +10,6 @@ body{
     margin: 0;
 }
 
-#root{
-    min-height: 100vh;
-}
-
 body > div{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
