@@ -10,7 +10,7 @@ function Alert() {
 
     return (
         <div id='formAlert' className={show && "show"}>
-            <Icon id='infoIcon' onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}/>
+            {/* <Icon id='infoIcon' onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}/> */}
             <p>{text}</p>
         </div>
     )
