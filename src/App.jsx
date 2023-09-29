@@ -58,15 +58,15 @@ function App() {
   }
 
   return (
-      loading ? 
+      // loading ? 
         <Loading notes={notes}/>
-        :
-        <>
-          <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
-            isClicked(!clicked)
-          }} clicked={clicked} onSubmitEvent={onSubmitEvent} onChangeEvent={onChangeEvent} content={content} setContent={setContent}/>
-          <NoteDivCompilation notes={notes} deleteNote={deleteNote} propDrilledSubmitHandler={propDrilledSubmitHandler}/>
-        </>
+        // :
+        // <>
+        //   <AddComp addIcon={addIcon} isClicked={isClicked} onClickEvent={() => {
+        //     isClicked(!clicked)
+        //   }} clicked={clicked} onSubmitEvent={onSubmitEvent} onChangeEvent={onChangeEvent} content={content} setContent={setContent}/>
+        //   <NoteDivCompilation notes={notes} deleteNote={deleteNote} propDrilledSubmitHandler={propDrilledSubmitHandler}/>
+        // </>
   )
 }
 

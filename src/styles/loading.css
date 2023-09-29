@@ -2,4 +2,25 @@
 #loading{
     display: grid;
     place-self: center;
+    place-items: center;
+    border: none;
+    height: auto;
+    width: auto;
+}
+
+#spinner{
+    width: 80px;
+    height: 80px;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-top: 2px solid blue;
+    border-radius: 50%;
+    animation: spinnerAnim 500ms infinite forwards;
+}
+
+@keyframes spinnerAnim {
+    to{
+        transform: rotate(1turn);
+    }
 }
