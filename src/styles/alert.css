@@ -3,28 +3,25 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    /* width: 200px; */
-    /* height: 120px; */
-    /* background-color: rgb(214, 214, 214); */
-    padding: 0 0 1em 1em;
-    display: grid;
-    border-top-right-radius: 10px;
+    height: 50px;
+    padding: 0 1em;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    flex-direction: row-reverse;
+    border-radius: 12px;
 }
 
 #infoIcon{
     font-size: 1.5rem;
-    place-self: end;
     cursor: pointer;
 }
 
 #formAlert > p{
-    place-self: top;
     display: none;
 }
 
 #formAlert.show{
-    width: 200px;
-    height: 120px;
     background-color: rgb(214, 214, 214);
 }
 
