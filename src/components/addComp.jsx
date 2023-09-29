@@ -2,6 +2,7 @@
 import '../styles/addComp.css'
 import submitIcon from '../assets/submit-icon.svg'
 import backIcon from '../assets/back-icon.svg'
+import Alert from './Alert'
 
 const AddComp = ({addIcon, onClickEvent, clicked, isClicked, onSubmitEvent, onChangeEvent, content, setContent}) => {
     // document.addEventListener("keydown", (e) => {
@@ -12,6 +13,7 @@ const AddComp = ({addIcon, onClickEvent, clicked, isClicked, onSubmitEvent, onCh
     return (
         clicked ? (
             <form method="post" id='addForm' onSubmit={onSubmitEvent}>
+                <Alert/>
                 <textarea placeholder='Type a note' onChange={onChangeEvent} value={content} autoFocus id='textA'></textarea>
                 <img src={backIcon} alt='back' title='Back' onClick={() => {
                     isClicked(false)
