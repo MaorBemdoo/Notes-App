@@ -49,7 +49,7 @@
     cursor: pointer;
 }
 
-#addForm img:nth-child(2){
+#addForm img:nth-child(3){
     position: absolute;
     bottom: 3px;
     left: 0;
