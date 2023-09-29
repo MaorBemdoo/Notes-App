@@ -32,7 +32,7 @@ function App() {
   const onSubmitEvent = (e) => {
     e.preventDefault();
     for (const note of notes) {
-      if (note.content.toLowerCase() == content.toLowerCase()) {
+      if (note.content.trim().toLowerCase() == content.trim().toLowerCase()) {
         setErr({icon: "", text: "There is already a note with this content"})
         return;
       }
