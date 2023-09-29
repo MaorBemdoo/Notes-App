@@ -14,7 +14,7 @@ const AddComp = ({addIcon, onClickEvent, clicked, isClicked, onSubmitEvent, onCh
         clicked ? (
             <form method="post" id='addForm' onSubmit={onSubmitEvent}>
                 <Alert err={err}/>
-                <textarea placeholder='Type a note' onChange={onChangeEvent} value={content} autoFocus id='textA'></textarea>
+                <textarea placeholder='Type a note' onChange={onChangeEvent} onFocus={() => document.getElementById("formAlert").style.display = "none"} value={content} autoFocus id='textA'></textarea>
                 <img src={backIcon} alt='back' title='Back' onClick={() => {
                     isClicked(false)
                     setContent('')

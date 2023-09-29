@@ -5,7 +5,7 @@
     right: 10px;
     height: 50px;
     padding: 0 1em;
-    display: flex;
+    display: none;
     gap: 7px;
     align-items: center;
     flex-direction: row-reverse;
