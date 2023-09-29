@@ -27,6 +27,11 @@ function App() {
 
   const onSubmitEvent = (e) => {
     e.preventDefault()
+    for (const note of notes) {
+      if (note.content.toLowerCase() == content.toLowerCase()) {
+        return;
+      }
+    }
     if(content.trim() == ''){
       return;
     } else{
