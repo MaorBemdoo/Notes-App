@@ -39,6 +39,16 @@
     align-self: end;
 }
 
+.note > p{
+    position: absolute;
+    font-size: 1.2rem;
+    color: white;
+    bottom: 0;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, 50%)
+}
+
 .note > div .divMenu{
     display: flex;
     flex-direction: column;

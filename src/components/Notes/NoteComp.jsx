@@ -82,6 +82,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, er
                     </div>
                     <img src={sendIcon} alt='send' onClick={() => setMenuClicked({first: !first, second})}/>
                 </div>
+                <p>31/09/2023</p>
                 <div>
                     <div className='divMenu' style={{display: !second ? 'none' : 'block'}}>
                         <div onClick={() => isEdited(!edited)}>
