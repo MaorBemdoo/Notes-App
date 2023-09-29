@@ -30,11 +30,11 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler}) =
         }
     }
 
-    document.addEventListener("keydown", (e) => {
-        if (e.ctrlKey && e.key == "Enter") {
-            formNoteSubmit(e);
-        }
-    });
+    // document.addEventListener("keydown", (e) => {
+    //     if (e.ctrlKey && e.key == "Enter") {
+    //         formNoteSubmit(e);
+    //     }
+    // });
 
     // const editNote = () => {
     //     isEdited(!edited)

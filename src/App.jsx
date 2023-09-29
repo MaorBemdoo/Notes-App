@@ -37,17 +37,17 @@ function App() {
     } else {
       setContent("");
       isClicked(false);
+      setNotes([
+        {
+          content,
+          id: uuidv4(),
+          bgColor: `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+            Math.random() * 256
+          )}, ${Math.floor(Math.random() * 256)})`,
+        },
+        ...notes,
+      ]);
     }
-    setNotes([
-      {
-        content,
-        id: uuidv4(),
-        bgColor: `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
-          Math.random() * 256
-        )}, ${Math.floor(Math.random() * 256)})`,
-      },
-      ...notes,
-    ]);
   };
 
   const deleteNote = (id) => {
@@ -56,6 +56,11 @@ function App() {
   };
 
   const propDrilledSubmitHandler = (editingId, editedContent) => {
+    // for (const note of notes) {
+    //   if (note.content.toLowerCase() == editedContent.toLowerCase()) {
+    //     return;
+    //   }
+    // }
     setNotes((prevNotes) =>
       prevNotes.map((note) =>
         note.id === editingId ? { ...note, content: editedContent } : note
