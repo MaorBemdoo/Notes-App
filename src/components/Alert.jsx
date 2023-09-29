@@ -8,8 +8,8 @@ function Alert({err}) {
     // const [Icon, setIcon] = useState(BsInfoCircle)
     // const [text, setText] = useState("")
     return (
-        <div id='formAlert' className={show && "show"}>
-            <BsInfoCircle id='infoIcon' onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}/>
+        <div id='formAlert' className={show && "show"} onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+            <BsInfoCircle id='infoIcon'/>
             <p>{err.text}</p>
         </div>
     )
