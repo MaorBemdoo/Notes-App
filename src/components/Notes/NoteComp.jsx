@@ -44,7 +44,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler}) =
         edited ? 
             <form className="formNote" method='post' onSubmit={formNoteSubmit}>
                 <textarea style={{backgroundColor: bgColor}} value={editedContent} onChange={(e) => setEditedContent(e.target.value)}></textarea>
-                <img src={backIcon} alt='back' onClick={() => {
+                <img src={backIcon} alt='back' title='Back' onClick={() => {
                     isEdited(false)
                     setEditedContent(content)
                     setMenuClicked({
@@ -52,7 +52,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler}) =
                         second: false
                     })
                 }}/>
-                <button><img src={submitIcon} alt='submit'/></button>
+                <button><img src={submitIcon} alt='submit' title='Edit'/></button>
             </form>
         : 
             <div className='note'>
