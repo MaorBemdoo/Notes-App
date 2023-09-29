@@ -1,7 +1,11 @@
 
 #loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     display: grid;
-    place-self: center;
     place-items: center;
     border: none;
     height: auto;
