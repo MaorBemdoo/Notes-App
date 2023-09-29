@@ -13,11 +13,11 @@ const AddComp = ({addIcon, onClickEvent, clicked, isClicked, onSubmitEvent, onCh
         clicked ? (
             <form method="post" id='addForm' onSubmit={onSubmitEvent}>
                 <textarea placeholder='Type a note' onChange={onChangeEvent} value={content} autoFocus id='textA'></textarea>
-                <img src={backIcon} alt='back' onClick={() => {
+                <img src={backIcon} alt='back' title='back' onClick={() => {
                     isClicked(false)
                     setContent('')
                     }}/>
-                <button role='submit'><img src={submitIcon} alt='submit'/></button>
+                <button role='submit' title='submit'><img src={submitIcon} alt='submit'/></button>
             </form>
         ) : (
             <div id="addDiv" onClick={onClickEvent}>
