@@ -55,12 +55,13 @@ function App() {
     setNotes(newNotes);
   };
 
-  const propDrilledSubmitHandler = (editingId, editedContent) => {
-    // for (const note of notes) {
-    //   if (note.content.toLowerCase() == editedContent.toLowerCase()) {
-    //     return;
-    //   }
-    // }
+  const propDrilledSubmitHandler = (editingId, editedContent, isEdited) => {
+    for (const note of notes) {
+      if (note.content.toLowerCase() == editedContent.toLowerCase() && note.id !== editingId) {
+        isEdited(true)
+        return;
+      }
+    }
     setNotes((prevNotes) =>
       prevNotes.map((note) =>
         note.id === editingId ? { ...note, content: editedContent } : note

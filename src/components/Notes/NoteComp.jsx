@@ -25,9 +25,8 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler}) =
         })
         if (editedContent.trim() == "") {
             deleteNote(id)
-        } else{
-            propDrilledSubmitHandler(id, editedContent)
         }
+        propDrilledSubmitHandler(id, editedContent, isEdited)
     }
 
     // document.addEventListener("keydown", (e) => {
