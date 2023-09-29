@@ -19,6 +19,10 @@ function App() {
 
   const [clicked, isClicked] = useState(false);
   const [loading, isLoading] = useState(true);
+  const [err, setErr] = useState({
+    icon: "",
+    text: ""
+  })
   // const [edited, isEdited] = useState(false)
 
   const onChangeEvent = (e) => {
@@ -29,10 +33,12 @@ function App() {
     e.preventDefault();
     for (const note of notes) {
       if (note.content.toLowerCase() == content.toLowerCase()) {
+        setErr({icon: "", text: "There is already a note with this content"})
         return;
       }
     }
     if (content.trim() == "") {
+      setErr({icon: "", text: "You cannot add an empty note. Please type a note"})
       return;
     } else {
       setContent("");
@@ -88,6 +94,7 @@ function App() {
         onChangeEvent={onChangeEvent}
         content={content}
         setContent={setContent}
+        err={err}
       />
       <NoteDivCompilation
         notes={notes}
