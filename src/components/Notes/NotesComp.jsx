@@ -6,6 +6,7 @@ const NoteDivCompilation = ({
   deleteNote,
   edited,
   propDrilledSubmitHandler,
+  err
 }) => {
   return (
     <>
@@ -20,6 +21,7 @@ const NoteDivCompilation = ({
             deleteNote={deleteNote}
             edited={edited}
             propDrilledSubmitHandler={propDrilledSubmitHandler}
+            err={err}
           />
         );
       })}

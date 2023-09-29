@@ -7,8 +7,9 @@ import backIcon from '../../assets/back-icon.svg'
 import { BsTrash3 } from "react-icons/bs";
 import { BsPencilSquare } from "react-icons/bs";
 import { useState } from 'react';
+import Alert from '../Alert'
 
-const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler}) => {
+const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, err}) => {
     const [{first, second}, setMenuClicked] = useState({
         first: false,
         second: false
@@ -42,6 +43,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler}) =
     return (
         edited ? 
             <form className="formNote" method='post' onSubmit={formNoteSubmit}>
+                <Alert err={err}/>
                 <textarea style={{backgroundColor: bgColor}} value={editedContent} onChange={(e) => setEditedContent(e.target.value)}></textarea>
                 <img src={backIcon} alt='back' title='Back' onClick={() => {
                     isEdited(false)

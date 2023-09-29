@@ -31,14 +31,15 @@ function App() {
 
   const onSubmitEvent = (e) => {
     e.preventDefault();
-    document.getElementById("formAlert").style.display = "flex"
     for (const note of notes) {
       if (note.content.trim().toLowerCase() == content.trim().toLowerCase()) {
+        document.getElementById("formAlert").style.display = "flex"
         setErr({icon: "", text: "There is already a note with this content"})
         return;
       }
     }
     if (content.trim() == "") {
+      document.getElementById("formAlert").style.display = "flex"
       setErr({icon: "", text: "You cannot add an empty note. Please type a note"})
       return;
     } else {
@@ -65,7 +66,12 @@ function App() {
   const propDrilledSubmitHandler = (editingId, editedContent, isEdited) => {
     for (const note of notes) {
       if (note.content.toLowerCase() == editedContent.toLowerCase() && note.id !== editingId) {
+        document.getElementById("formAlert").style.display = "flex"
         isEdited(true)
+        setErr({
+          icon: "",
+          text: "There is already a note with this content"
+        })
         return;
       }
     }
@@ -95,12 +101,12 @@ function App() {
         onChangeEvent={onChangeEvent}
         content={content}
         setContent={setContent}
-        err={err}
       />
       <NoteDivCompilation
         notes={notes}
         deleteNote={deleteNote}
         propDrilledSubmitHandler={propDrilledSubmitHandler}
+        err={err}
       />
     </>
   );
