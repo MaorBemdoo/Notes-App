@@ -72,11 +72,11 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, er
                 <div>
                     <div className='divMenu' style={{display: !first ? 'none' : 'block'}}>
                         <div>
-                            <BsEnvelopeAt/>
+                            <BsEnvelopeAt style={{fontSize: "1.2rem"}}/>
                             <p>Email</p>
                         </div>
                         <div>
-                            <BsWhatsapp/>
+                            <BsWhatsapp style={{fontSize: "1.2rem", color: "green", minInlineSize: "fit-content"}}/>
                             <p>Whatsapp</p>
                         </div>
                     </div>
