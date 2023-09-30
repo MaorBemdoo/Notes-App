@@ -53,7 +53,7 @@ function App() {
           bgColor: `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
             Math.random() * 256
           )}, ${Math.floor(Math.random() * 256)})`,
-          date: `${moment().date()}/${moment().month()}/${moment().year()}`
+          date: `${moment().date()}/${moment().month() + 1}/${moment().year()}`
           },
         ...notes,
       ]);
