@@ -4,6 +4,7 @@ import AddComp from "./components/AddComp";
 import NoteDivCompilation from "./components/Notes/NotesComp";
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import moment from "moment";
 import Loading from "./components/Loading";
 
 function App() {
@@ -52,7 +53,8 @@ function App() {
           bgColor: `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
             Math.random() * 256
           )}, ${Math.floor(Math.random() * 256)})`,
-        },
+          date: `${moment().date()}/${moment().month()}/${moment().year()}`
+          },
         ...notes,
       ]);
     }

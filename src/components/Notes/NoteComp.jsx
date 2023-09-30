@@ -8,7 +8,7 @@ import { BsTrash3, BsPencilSquare, BsWhatsapp, BsEnvelopeAt } from "react-icons/
 import { useState } from 'react';
 import Alert from '../Alert'
 
-const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, err, setErr}) => {
+const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandler, err, setErr}) => {
     const [{first, second}, setMenuClicked] = useState({
         first: false,
         second: false
@@ -82,7 +82,7 @@ const NoteDiv = ({content, bgColor, id, deleteNote, propDrilledSubmitHandler, er
                     </div>
                     <img src={sendIcon} alt='send' onClick={() => setMenuClicked({first: !first, second})}/>
                 </div>
-                {/* <p>31/09/2023</p> */}
+                <p>{date}</p>
                 <div>
                     <div className='divMenu' style={{display: !second ? 'none' : 'block'}}>
                         <div onClick={() => isEdited(!edited)}>

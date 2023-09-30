@@ -11,13 +11,14 @@ const NoteDivCompilation = ({
 }) => {
   return (
     <>
-      {notes.map(({ content, id, bgColor}) => {
+      {notes.map(({ content, id, bgColor, date}) => {
         // console.log(content);
         return (
           <NoteDiv
             content={content}
             key={id}
             bgColor={bgColor}
+            date={date}
             id={id}
             deleteNote={deleteNote}
             edited={edited}
