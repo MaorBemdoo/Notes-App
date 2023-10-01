@@ -90,7 +90,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
             <div className='note'>
                 <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
                 <div>
-                    <div className={`divMenu ${first ? 'showDM' : ''}`}>
+                    <div className="divMenu" id={first ? 'showDM' : ''}>
                         <div>
                             <BsEnvelopeAt style={{fontSize: "1.2rem"}}/>
                             <p>Email</p>
@@ -104,7 +104,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
                 </div>
                 <p>{date}</p>
                 <div>
-                    <div className={`divMenu ${second ? 'showDM' : ''}`}>
+                    <div className="divMenu" id={second ? 'showDM' : ''}>
                         <div onClick={() => isEdited(!edited)}>
                             <BsPencilSquare style={{color: 'green'}}/>
                             <p>Edit</p>

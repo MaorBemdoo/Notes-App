@@ -59,6 +59,7 @@
 
 .note > div .divMenu{
     display: flex;
+    /* display: none; */
     flex-direction: column;
     /* gap: 1em; */
     align-items: center;
@@ -67,6 +68,9 @@
     border: 1px solid black;
     background-color: white;
     opacity: 0;
+    transition: all 500ms ease-out;
+    user-select: none;
+    pointer-events: none;
     /* padding: 1em; */
 }
 
@@ -84,10 +88,10 @@
     border-bottom: 1px black solid;
 }
 
-.divMenu.showDM{
+#showDM{
     opacity: 1;
+    /* display: flex; */
     transform: translateX(0);
-    transition: all 500ms ease-out;
 }
 
 .note > div > img{
