@@ -7,6 +7,7 @@ import backIcon from '../../assets/back-icon.svg'
 import { BsTrash3, BsPencilSquare, BsWhatsapp, BsEnvelopeAt } from "react-icons/bs";
 import { useState } from 'react';
 import Alert from '../Alert'
+import emailjs from '@emailjs/browser';
 
 const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandler, err, setErr}) => {
     const [{first, second}, setMenuClicked] = useState({
@@ -62,6 +63,31 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
         whatsappLink.click()
     }
 
+    const emailFunc = () => {
+        const serviceID = "service_u50j5ho"
+        const templateID = "template_397imxp"
+        const pubilcKey = "SodAMZNmb3PKAwz9g"
+
+        const clientEmail = prompt("Enter your email address:")
+
+        setMenuClicked({
+            first: false,
+            second: false
+        })
+
+        const templateParams = {
+            message: content,
+            email: clientEmail
+        };
+        
+        emailjs.send(serviceID, templateID, templateParams, pubilcKey)
+            .then((response) => {
+                alert("Mail sent succesfully")
+            }, (err) => {
+                alert("An error occured please try again")
+            });
+    }
+
     // document.addEventListener("keydown", (e) => {
     //     if (e.ctrlKey && e.key == "Enter") {
     //         formNoteSubmit(e);
@@ -92,7 +118,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
                 <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
                 <div>
                     <div className="divMenu" id={first ? 'showDM' : ''}>
-                        <div>
+                        <div onClick={emailFunc}>
                             <BsEnvelopeAt style={{fontSize: "1.2rem"}}/>
                             <p>Email</p>
                         </div>
