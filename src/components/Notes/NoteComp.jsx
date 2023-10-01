@@ -16,10 +16,6 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
     const [editedContent, setEditedContent] = useState(content)
     const [edited, isEdited] = useState(false)
 
-    const cnFunc = (menuClicked) => {
-        return `divMenu ${menuClicked ? "showDM" : ""}`;
-    }
-
     const formNoteSubmit = (e) => {
         e.preventDefault()
         isEdited(false)
@@ -94,7 +90,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
             <div className='note'>
                 <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
                 <div>
-                    <div className={cnFunc(first)}>
+                    <div className={`divMenu ${first ? 'showDM' : ''}`}>
                         <div>
                             <BsEnvelopeAt style={{fontSize: "1.2rem"}}/>
                             <p>Email</p>
@@ -108,7 +104,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
                 </div>
                 <p>{date}</p>
                 <div>
-                    <div className={cnFunc(second)}>
+                    <div className={`divMenu ${second ? 'showDM' : ''}`}>
                         <div onClick={() => isEdited(!edited)}>
                             <BsPencilSquare style={{color: 'green'}}/>
                             <p>Edit</p>
