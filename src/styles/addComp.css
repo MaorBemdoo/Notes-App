@@ -22,6 +22,7 @@
 }
 
 #addImg{
+    display: none;
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -86,5 +87,8 @@
 @media (max-width: 500px){
     #addDiv{
         display: none;
+    }
+    #addImg{
+        display: block;
     }
 }
