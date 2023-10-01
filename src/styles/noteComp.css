@@ -27,12 +27,20 @@
     left: 10px;
 }
 
+.note > div:nth-child(2) .divMenu{
+    transform: translateX(-40px);
+}
+
 .note > div:nth-child(2) > img{
     align-self: start;
 }
 
 .note > div:last-child{
     right: 10px;
+}
+
+.note > div:last-child .divMenu{
+    transform: translateX(40px);
 }
 
 .note > div:last-child > img{
@@ -58,6 +66,7 @@
     border-radius: 5px;
     border: 1px solid black;
     background-color: white;
+    opacity: 1;
     /* padding: 1em; */
 }
 
@@ -73,6 +82,12 @@
 
 .divMenu > div:not(:last-child){
     border-bottom: 1px black solid;
+}
+
+.divMenu.showDM{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms ease-out;
 }
 
 .note > div > img{

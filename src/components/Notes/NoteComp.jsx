@@ -16,6 +16,10 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
     const [editedContent, setEditedContent] = useState(content)
     const [edited, isEdited] = useState(false)
 
+    const cnFunc = (menuClicked) => {
+        return `divMenu ${menuClicked ? "showDM" : ""}`;
+    }
+
     const formNoteSubmit = (e) => {
         e.preventDefault()
         isEdited(false)
@@ -43,12 +47,13 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
 
     const whatsappFunc = () => {
         const phoneNum = prompt("Enter your phone number: ")
+        const phoneNumRegex = /(\+?\d{1,4}[ -]?)?(\(?\d{1,}\)?[ -]?)?\d{1,}([ -]?\d{1,}){4,}/g
         const phoneNumWhiteSpaceRegex = /[\s\-]+/g
         setMenuClicked({
             first: false,
             second: false
         })
-        if(phoneNum.replace(phoneNumWhiteSpaceRegex, '') == ""){
+        if(!(phoneNumRegex.test(phoneNum))){
             alert("Please type a valid number")
             whatsappFunc()
             return;
@@ -89,7 +94,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
             <div className='note'>
                 <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
                 <div>
-                    <div className='divMenu' style={{display: !first ? 'none' : 'block'}}>
+                    <div className={cnFunc(first)}>
                         <div>
                             <BsEnvelopeAt style={{fontSize: "1.2rem"}}/>
                             <p>Email</p>
@@ -103,7 +108,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
                 </div>
                 <p>{date}</p>
                 <div>
-                    <div className='divMenu' style={{display: !second ? 'none' : 'block'}}>
+                    <div className={cnFunc(second)}>
                         <div onClick={() => isEdited(!edited)}>
                             <BsPencilSquare style={{color: 'green'}}/>
                             <p>Edit</p>
