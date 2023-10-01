@@ -22,9 +22,12 @@ const AddComp = ({addIcon, onClickEvent, clicked, isClicked, onSubmitEvent, onCh
                 <button role='submit' title='Submit'><img src={submitIcon} alt='submit'/></button>
             </form>
         ) : (
-            <div id="addDiv" onClick={onClickEvent}>
-                <img src={addIcon} />
-            </div>
+            <>
+                <div id="addDiv" onClick={onClickEvent}>
+                    <img src={addIcon} />
+                </div>
+                <img src={addIcon} id="addImg" onClick={onClickEvent}/>
+            </>
         )
     )
 }

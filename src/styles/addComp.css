@@ -21,6 +21,22 @@
     height: 70px;
 }
 
+#addImg{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all ease-in 200ms;
+}
+
+#addImg:hover{
+    width: 50px;
+    height: 50px;
+}
+
 #addForm{
     position: relative;
     height: 300px;
@@ -65,4 +81,10 @@
     height: 30px;
     width: 50px;
     background: transparent;
+}
+
+@media (max-width: 500px){
+    #addDiv{
+        display: none;
+    }
 }
