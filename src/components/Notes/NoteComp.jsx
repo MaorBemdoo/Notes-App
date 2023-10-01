@@ -49,6 +49,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
             first: false,
             second: false
         })
+        if(phoneNum == null) return;
         if(!(phoneNumRegex.test(phoneNum))){
             alert("Please type a valid number")
             whatsappFunc()

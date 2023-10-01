@@ -92,6 +92,8 @@
     opacity: 1;
     /* display: flex; */
     transform: translateX(0);
+    /* user-select: all; */
+    pointer-events: all;
 }
 
 .note > div > img{
