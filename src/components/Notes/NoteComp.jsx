@@ -44,6 +44,10 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
     const whatsappFunc = () => {
         const phoneNum = prompt("Enter your phone number: ")
         const phoneNumWhiteSpaceRegex = /[\s\-]+/g
+        setMenuClicked({
+            first: false,
+            second: false
+        })
         if(phoneNum.replace(phoneNumWhiteSpaceRegex, '') == ""){
             alert("Please type a valid number")
             whatsappFunc()
@@ -54,10 +58,6 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
         whatsappLink.setAttribute("rel", "noopener noreferrer")
         whatsappLink.setAttribute("target", "_blank")
         whatsappLink.click()
-        setMenuClicked({
-            first: false,
-            second: false
-        })
     }
 
     // document.addEventListener("keydown", (e) => {
