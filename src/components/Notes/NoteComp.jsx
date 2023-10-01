@@ -41,6 +41,25 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
         }
     }
 
+    const whatsappFunc = () => {
+        const phoneNum = prompt("Enter your phone number: ")
+        const phoneNumWhiteSpaceRegex = /[\s\-]+/g
+        if(phoneNum.replace(phoneNumWhiteSpaceRegex, '') == ""){
+            alert("Please type a valid number")
+            whatsappFunc()
+            return;
+        }
+        const whatsappLink = document.createElement("a")
+        whatsappLink.setAttribute("href", `https://api.whatsapp.com/send?phone=${phoneNum.replace(phoneNumWhiteSpaceRegex, '')}&text=${encodeURIComponent(content)}`)
+        whatsappLink.setAttribute("rel", "noopener noreferrer")
+        whatsappLink.setAttribute("target", "_blank")
+        whatsappLink.click()
+        setMenuClicked({
+            first: false,
+            second: false
+        })
+    }
+
     // document.addEventListener("keydown", (e) => {
     //     if (e.ctrlKey && e.key == "Enter") {
     //         formNoteSubmit(e);
@@ -75,7 +94,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
                             <BsEnvelopeAt style={{fontSize: "1.2rem"}}/>
                             <p>Email</p>
                         </div>
-                        <div>
+                        <div onClick={whatsappFunc}>
                             <BsWhatsapp style={{fontSize: "1.2rem", color: "green", minInlineSize: "fit-content"}}/>
                             <p>Whatsapp</p>
                         </div>
