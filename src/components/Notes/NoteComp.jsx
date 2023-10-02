@@ -118,11 +118,11 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
                 <textarea style={{backgroundColor: bgColor}} value={content} disabled></textarea>
                 <div>
                     <div className="divMenu" id={first ? 'showDM' : ''}>
-                        <div onClick={emailFunc}>
+                        <div onClick={emailFunc} title='Send to Email'>
                             <BsEnvelopeAt style={{fontSize: "1.2rem"}}/>
                             <p>Email</p>
                         </div>
-                        <div onClick={whatsappFunc}>
+                        <div onClick={whatsappFunc} title='Send to Whatsapp'>
                             <BsWhatsapp style={{fontSize: "1.2rem", color: "green", minInlineSize: "fit-content"}}/>
                             <p>Whatsapp</p>
                         </div>
