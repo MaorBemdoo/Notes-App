@@ -79,6 +79,8 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
             message: content,
             email: clientEmail
         };
+
+        if(clientEmail == null) return;
         
         emailjs.send(serviceID, templateID, templateParams, pubilcKey)
             .then((response) => {
