@@ -50,9 +50,7 @@ function App() {
         {
           content,
           id: uuidv4(),
-          bgColor: `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
-            Math.random() * 256
-          )}, ${Math.floor(Math.random() * 256)})`,
+          bgColor: `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`,
           date: `${moment().date()}/${moment().month() + 1}/${moment().year()}`
           },
         ...notes,
