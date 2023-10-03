@@ -70,6 +70,8 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
 
         const clientEmail = prompt("Enter your email address:")
 
+        const clientEmailRegex = /^\S{1,}@\S{1,}[.]\S{1,}/gm
+
         setMenuClicked({
             first: false,
             second: false
