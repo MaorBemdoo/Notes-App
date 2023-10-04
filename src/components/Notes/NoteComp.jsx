@@ -97,10 +97,6 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
     //     }
     // });
 
-    // const editNote = () => {
-    //     isEdited(!edited)
-    // }
-
     return (
         edited ? 
             <form className="formNote" method='post' onSubmit={formNoteSubmit}>
