@@ -87,6 +87,7 @@ const NoteDiv = ({content, bgColor, id, date, deleteNote, propDrilledSubmitHandl
                 alert("Mail sent succesfully")
             }, (err) => {
                 alert("An error occured please try again")
+                emailFunc()
             });
     }
 
