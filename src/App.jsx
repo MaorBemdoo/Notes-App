@@ -24,7 +24,6 @@ function App() {
     icon: "",
     text: ""
   })
-  // const [edited, isEdited] = useState(false)
 
   const onChangeEvent = (e) => {
     setContent(e.target.value);
