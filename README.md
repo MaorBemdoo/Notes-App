@@ -7,3 +7,13 @@ A Notes taking web app which aids to take down short or long text notes with no 
 2. Ability to send a note via whatsapp or email
 3. Responsive and user-friendly
 4. Stores notes in localStorage
+
+## Technologies, Languages and Tools used
+
+- React
+- Vite
+- HTML5
+- CSS3
+- CSS grid
+- Emailjs
+- Whatsapp api
