@@ -6,3 +6,4 @@ A Notes taking web app which aids to take down short or long text notes with no 
 1. Ability to add, edit and delete a note
 2. Ability to send a note via whatsapp or email
 3. Responsive and user-friendly
+4. Stores notes in localStorage
