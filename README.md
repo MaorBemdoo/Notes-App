@@ -26,3 +26,18 @@ I used the tech stack above to improve my react skills especially npm packages l
 
 - The app design could not display my custom feature
 - I plan to add more social media links
+
+## How to install and run the project
+
+- Fork the project and clone to your local machine
+```bash
+    git clone <repo>
+```
+- Redirect to the project folder and install the project dependencies
+```node
+    npm install
+```
+- Open the live project on your web browser
+```node
+    npm run dev
+```
