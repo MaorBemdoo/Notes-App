@@ -17,3 +17,7 @@ A Notes taking web app which aids to take down short or long text notes with no 
 - CSS grid
 - Emailjs
 - Whatsapp api
+
+## Why I used the Tech Stack
+
+I used the tech stack above to improve my react skills especially npm packages like emailjs
