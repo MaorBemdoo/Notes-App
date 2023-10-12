@@ -50,3 +50,7 @@ I used the tech stack above to improve my react skills especially npm packages l
 </div>
 
 **[Demo Link]()**
+
+## Author
+
+**[Bemdoo Maor](https://github.com/MaorBemdoo)**
