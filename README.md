@@ -54,3 +54,7 @@ I used the tech stack above to improve my react skills especially npm packages l
 ## Author
 
 **[Bemdoo Maor](https://github.com/MaorBemdoo)**
+
+## Support
+
+Give this repo a ⭐ if you like it
