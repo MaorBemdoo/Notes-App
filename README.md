@@ -58,3 +58,7 @@ I used the tech stack above to improve my react skills especially npm packages l
 ## Support
 
 Give this repo a ⭐ if you like it
+
+## License
+
+This repo is protected by the [MIT](LICENSE) License
