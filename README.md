@@ -43,3 +43,8 @@ I used the tech stack above to improve my react skills especially npm packages l
 ```
 
 ## Demo
+
+<div align="center">
+    <img src="src/assets/desktopScreenshot.jpg" alt="Desktop Screenshot">
+    <img src="src/assets/mobileScreenshots.jpg" alt="Mobile Screenshot">
+</div>
