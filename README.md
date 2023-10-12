@@ -21,3 +21,8 @@ A Notes taking web app which aids to take down short or long text notes with no 
 ## Why I used the Tech Stack
 
 I used the tech stack above to improve my react skills especially npm packages like emailjs
+
+## Encountered Challenges and future Features
+
+- The app design could not display my custom feature
+- I plan to add more social media links
