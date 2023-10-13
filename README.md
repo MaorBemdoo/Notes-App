@@ -53,7 +53,9 @@ I used the tech stack above to improve my react skills especially npm packages l
 
 ## Author
 
-**[Bemdoo Maor](https://github.com/MaorBemdoo)**
+| <img src="https://github.com/MaorBemdoo.png" width="60px"/> |
+|:--:|
+|Github: [@MaorBemdoo](https://github.com/MaorBemdoo) <br> LinkedIn: [Bemdoo Maor](https://www.linkedin.com/in/bemdoo-maor-449698279/)|
 
 ## Support
 
