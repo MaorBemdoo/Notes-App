@@ -85,32 +85,34 @@ function App() {
     isLoading(false);
   };
 
-  return loading ? (
-    <Loading notes={notes} />
-  ) : (
-    <>
-      <AddComp
-        addIcon={addIcon}
-        isClicked={isClicked}
-        onClickEvent={() => {
-          isClicked(!clicked);
-        }}
-        clicked={clicked}
-        onSubmitEvent={onSubmitEvent}
-        onChangeEvent={onChangeEvent}
-        content={content}
-        setContent={setContent}
-        err={err}
-      />
-      <NoteDivCompilation
-        notes={notes}
-        deleteNote={deleteNote}
-        propDrilledSubmitHandler={propDrilledSubmitHandler}
-        err={err}
-        setErr={setErr}
-      />
-    </>
-  );
+  return (
+    // loading ? (
+    // <Loading notes={notes} />
+  // ) : (
+      <>
+        <AddComp
+          addIcon={addIcon}
+          isClicked={isClicked}
+          onClickEvent={() => {
+            isClicked(!clicked);
+          }}
+          clicked={clicked}
+          onSubmitEvent={onSubmitEvent}
+          onChangeEvent={onChangeEvent}
+          content={content}
+          setContent={setContent}
+          err={err}
+        />
+        <NoteDivCompilation
+          notes={notes}
+          deleteNote={deleteNote}
+          propDrilledSubmitHandler={propDrilledSubmitHandler}
+          err={err}
+          setErr={setErr}
+        />
+      </>
+    // );
+  )
 }
 
 export default App;
