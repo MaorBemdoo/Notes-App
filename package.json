@@ -17,7 +17,7 @@
     "react-icons": "^4.11.0",
     "react-whatsapp-widget": "^2.2.0",
     "uuid": "^9.0.1",
-    "vercel": "^32.4.1"
+    "vercel": "^33.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
